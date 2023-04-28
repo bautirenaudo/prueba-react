@@ -84,14 +84,42 @@ form button {
 
 .list li {
   display: grid;
-  align-items: center;
-  text-align: left;
+  grid-template-columns: auto 30px;
   background-color: #ffffff00;
   border-radius: 10px;
   margin: 20px;
   padding: 8px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.30);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.list li.deleted{
+  animation: deletingItem .3s linear;
+}
+
+@keyframes deletingItem {
+  from {
+    width: 90%;
+    padding: 8px;
+  }
+
+  to {
+    width: 0%;
+    padding: 8px 0px;
+  }
+}
+
+.list li.checked>p {
+  text-decoration: line-through;
+  color: #ffffff4c;
+}
+
+.list li p {
+  display: block;
+  color: #ffff;
   font-size: 16px;
   font-weight: bold;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
-  color: #ffff;
+  margin: 0 0;
+  text-align: left;
 }

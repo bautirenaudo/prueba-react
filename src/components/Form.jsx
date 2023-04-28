@@ -6,9 +6,10 @@ export function Form({ addItem }) {
 
     const submit = (e) => {
         e.preventDefault();
-
-        addItem(newValue)
-        setNewValue("");
+        if (newValue) {
+            addItem(newValue)
+            setNewValue("");
+        }
     }
 
     return (
