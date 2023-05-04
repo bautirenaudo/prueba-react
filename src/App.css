@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  -webkit-tap-highlight-color: none;
+  -webkit-tap-highlight-color: transparent;
   user-select: none;
   color: #000;
   text-align: center;
@@ -122,4 +122,6 @@ form button {
   font-weight: bold;
   margin: 0 0;
   text-align: left;
+  max-width: 98%;
+  overflow: hidden;
 }
